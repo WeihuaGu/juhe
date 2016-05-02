@@ -1,0 +1,27 @@
+{
+    "name": "weihuagu/juhe",
+    "description": "my common data cloud",
+    "keywords": ["juhe","slim-skeleton"],
+    "homepage": "http://github.com/weihuagu",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "weihuagu",
+            "email": "weihuagu_work@163.com",
+            "homepage": "http://guweihua.yun.93me.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "slim/slim": "^3.1",
+        "slim/php-view": "^2.0",
+        "monolog/monolog": "^1.17",
+	"rdlowrey/auryn":"*",
+	 "catfan/Medoo":"*"
+    },
+    "autoload": {
+        "psr-4": {
+			"app\\":"./app"
+ 			}
+    }
+}
