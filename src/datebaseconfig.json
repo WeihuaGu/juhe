@@ -1,9 +1,9 @@
 {
      "datebase": {
        "database_type" :"mysql",
-       "database_name" :"u447254718_color",
+       "database_name" :"u141459608_juhe",
        "server" :"localhost",
-       "username" :"u447254718_color",
+       "username" :"u141459608_juhe",
        "password" :"19920420",
        "charset" :"utf8"
     }
