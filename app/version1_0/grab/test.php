@@ -1,6 +1,7 @@
 <?php
 namespace app\version1_0\grab;
 require_once 'YouKu.php';
-$test=new YouKu();
+require_once 'XunLei.php';
+$test=new XunLei();
 $test->getAccout();
 
