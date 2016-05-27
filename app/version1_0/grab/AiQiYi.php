@@ -1,16 +1,16 @@
 <?php
 namespace app\version1_0\grab;
 require_once 'simplescrap.php';
-class YouKu{
+class AiQiYi{
 private $accouts=array();
 private $accout2url=array();
 public function getAccout(){
 		$this->get2();
-		$this->get1();
+		//$this->get1();
 		return $this->accouts;
 	}
 public function get1(){
-		$url1="http://api.vipfenxiang.com/v1/post/cat?id=2";
+		$url1="http://api.vipfenxiang.com/v1/post/cat?id=4";
 		$data=file_get_contents($url1);
 		$content = json_decode($data);
 		if($content->error==0){
@@ -37,7 +37,7 @@ public function get2(){
 
 }
 public function get2url(){
-	$url="http://www.vipfenxiang.com/yk/";
+	$url="http://www.vipfenxiang.com/iqiyi/";
 	$scrap=new \SimpleScrap();
 	$string=$scrap->gernarateXpathUseNotename("article[@class='excerpt excerpt-one']/header/h2/a","href");
 	$xml=$scrap->domTransferXML($url);
@@ -50,7 +50,7 @@ public function get2url(){
 public function get3url(){
 	$url="http://www.vipzhanghao.com/youku_vip/";
 	$scrap=new \SimpleScrap();
-	$string=$scrap->gernarateXpathUseNotename("h2/a","href");
+	$string=$scrap->gernarateXpathUseNotename("article[@class='excerpt']/h2/a","href");
 	echo $string;
 	$xml=$scrap->domTransferXML($url);
 	$data=$scrap->xmldateFromXpath($xml,$string);
