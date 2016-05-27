@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 class SimpleScrap{
 	public function domTransferXML($domlink){
 		
