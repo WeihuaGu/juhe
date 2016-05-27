@@ -1,5 +1,6 @@
 <?php
 namespace app\version1_0\grab;
+error_reporting(0);
 require_once 'simplescrap.php';
 class XunLei{
 private $accouts=array();
