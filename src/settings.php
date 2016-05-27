@@ -16,5 +16,6 @@ return [
     ],
     'config'=>[
 	'database'=> __DIR__ . '/datebaseconfig.json',
-	]
+	],
+     'mod'=>'production'
 ];
