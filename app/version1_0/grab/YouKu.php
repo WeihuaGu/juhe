@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 namespace app\version1_0\grab;
 require_once 'simplescrap.php';
 class YouKu{
