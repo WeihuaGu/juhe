@@ -1,6 +1,7 @@
 <?php
 
 namespace app\version1_0\grab;
+set_time_limit(0);
 require_once 'simplescrap.php';
 class YouKu{
 private $get2rate=0.6;
