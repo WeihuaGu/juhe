@@ -1,8 +1,9 @@
 <?php
 namespace app\version1_0\grab;
-error_reporting(0);
+
 require_once 'simplescrap.php';
 class XunLei{
+private $get2rate=0.6;
 private $accouts=array();
 private $accout2url=array();
 private $accout3url=array();

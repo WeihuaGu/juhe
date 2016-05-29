@@ -1,9 +1,9 @@
 <?php
 
 namespace app\version1_0\grab;
-error_reporting(0);
 require_once 'simplescrap.php';
 class YouKu{
+private $get2rate=0.6;
 private $accouts=array();
 private $accout2url=array();
 public function getAccout(){
@@ -42,11 +42,15 @@ public function get2url(){
 	$url="http://www.vipfenxiang.com/yk/";
 	$scrap=new \SimpleScrap();
 	$string=$scrap->gernarateXpathUseNotename("article[@class='excerpt excerpt-one']/header/h2/a","href");
+	echo $string;
 	$xml=$scrap->domTransferXML($url);
 	$data=$scrap->xmldateFromXpath($xml,$string);
+	$lice=count($data)*$this->get2rate;
+	$data = array_slice($data, 0, $lice);
 	foreach ($data as $item){
 		array_push($this->accout2url,$item['href']);
 	}
+	
 
 }
 public function get3url(){
