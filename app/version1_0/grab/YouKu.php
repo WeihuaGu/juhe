@@ -42,7 +42,6 @@ public function get2url(){
 	$url="http://www.vipfenxiang.com/yk/";
 	$scrap=new \SimpleScrap();
 	$string=$scrap->gernarateXpathUseNotename("article[@class='excerpt excerpt-one']/header/h2/a","href");
-	echo $string;
 	$xml=$scrap->domTransferXML($url);
 	$data=$scrap->xmldateFromXpath($xml,$string);
 	$lice=count($data)*$this->get2rate;
